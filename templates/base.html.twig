@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Scarping!{% endblock %}</title>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+  </head>
+  <body>
+   <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="{{ path('companies.index') }}" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="{{ path('companies.create') }}" class="nav-link px-2 text-white">Create</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+    <div class="container pt-2">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+  </body>
+</html>
